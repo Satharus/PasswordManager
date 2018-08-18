@@ -34,9 +34,9 @@ This project uses the following:
 
 Clone this repo and make sure that the "PasswordManager.py" and "PasswordManagerAuth.json" files are in the same folder.
 
-This WILL make you access the SAME Google sheet as anyone who has tried this project, the google sheet contains some dummy usernames and password. DO NOT enter any real usernames or passwords there, they will be visible to everyone else.
+This WILL make you access the SAME Google sheet as anyone who has tried this project, the Google sheet contains some dummy usernames and password. DO NOT enter any real usernames or passwords there, they will be visible to everyone else.
 
-If you wish to use this project, fork it and add your OWN google sheet using this tutorial: https://youtu.be/vISRn5qFrkM
+If you wish to use this project, fork it and add your OWN Google sheet using this tutorial: https://youtu.be/vISRn5qFrkM
 
 
 To run from a Linux shell: 
