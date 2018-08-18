@@ -21,13 +21,15 @@ This project uses the following:
 ```
   $ sudo apt update
   $ sudo apt install python3-pip build-essential
-  $ sudo pip install gspread oauth2client
+  $ sudo pip3 install gspread oauth2client
+  $ sudo pip3 install --upgrade google-auth-oauthlib
 ```
 
 #### Arch and its derivatives
 ```
   $ sudo pacman -Sy python-pip
   $ sudo pip install gspread oauth2client
+  $ sudo pip install --upgrade google-auth-oauthlib
 ```
 
 ## How to run
