@@ -43,3 +43,7 @@ To run from a Linux shell:
 ``` 
 clear && python3 PasswordManager.py
 ```
+
+After that you will see the master password printed on the first line of your terminal, use that to edit the _database_ of usernames and passwords and play around! 
+
+Please don't mess up the google sheet too much(Preferably just add your name as a username and add any dummy password!) as that will ruin the demonstration of this project for anyone else who is curious about this project.
