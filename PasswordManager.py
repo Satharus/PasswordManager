@@ -66,6 +66,9 @@ def insertNewEntry():
 			tempPassword = input("Master Password: ") #Input the password
 			if tempPassword == masterPassword:
 				service = input("Service name: ")
+				service = service.lower()
+				service = service.lstrip()
+				service = service.rstrip()
 				if checkService(service) == 0: #Checks if the sevice exists or not
 					username = input("Username: ")
 					password = input("Password: ")
@@ -133,6 +136,9 @@ def insertNewEntry():
 def deleteEntry():
 	while 1:
 		service = input("Service name: ")
+		service = service.lower()
+		service = service.lstrip()
+		service = service.rstrip()
 		if checkService(service) == 1:
 			temp = sheet.find(service)
 			x = 0
@@ -172,6 +178,9 @@ def deleteEntry():
 def getInfo():
 	while 1:
 		service = input("Service name: ")
+		service = service.lower()
+		service = service.lstrip()
+		service = service.rstrip()
 		if checkService(service) == 1:
 			temp = sheet.find(service)
 			x = 0
@@ -215,6 +224,9 @@ def getInfo():
 def changeEntry():
 	while 1:
 		service = input("Service name: ")
+		service = service.lower()
+		service = service.lstrip()
+		service = service.rstrip()
 		if checkService(service) == 1:
 			temp = sheet.find(service)
 			print("What would you like to change? ")
