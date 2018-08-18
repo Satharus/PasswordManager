@@ -26,6 +26,7 @@ print(masterPassword)
 def initialiseServices():
 	#Adds all the services to the gServices array
 	global gServices
+	gServices = ["Service", "Dummy"]
 	i = len(gServices)
 	while sheet.cell(i,1).value!='': #It should only break when it reaches
 									#the end of the list, i.e. empty cell
