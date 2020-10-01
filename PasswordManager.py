@@ -3,6 +3,7 @@ import gspread #Used to access google sheets
 from oauth2client.service_account import ServiceAccountCredentials #Used to authenticate
 																#the user to google sheets
 import os #Used for some Linux specific terminal commands such as "clear"
+import getpass
 ######
 
 #Initialising authentication and account information
@@ -68,7 +69,7 @@ def insertNewEntry():
 	while 1:
 		x = 0
 		while x < 3:
-			tempPassword = input("Master Password: ") #Input the password
+			tempPassword = getpass.getpass("Master Password: ") #Input the password
 			if tempPassword == masterPassword:
 				service = input("Service name: ")
 				service = service.lower()
@@ -148,7 +149,7 @@ def deleteEntry():
 			temp = sheet.find(service)
 			x = 0
 			while x < 3:
-				tempPassword = input("Master Password: ")
+				tempPassword =  getpass.getpass("Master Password: ")
 				if tempPassword == masterPassword:
 					sheet.delete_row(temp.row)
 					nAccount = sheet.row_count
@@ -190,7 +191,7 @@ def getInfo():
 			temp = sheet.find(service)
 			x = 0
 			while x < 3:
-				tempPassword = input("Master Password: ")
+				tempPassword =  getpass.getpass("Master Password: ")
 				if tempPassword == masterPassword:
 					print("Service: ", end='')
 					print(sheet.cell(temp.row, temp.col).value)
@@ -244,7 +245,7 @@ def changeEntry():
 				while x < 3:
 					print("Current Username: ", end='')
 					print(sheet.cell(temp.row, temp.col+1).value)
-					tempPassword = input("Master Password: ")
+					tempPassword =  getpass.getpass("Master Password: ")
 					if tempPassword == masterPassword:
 						print("Enter a new username: ", end='')
 						editData(temp.row, temp.col+1)
@@ -258,7 +259,7 @@ def changeEntry():
 			elif choice == 2:
 				x = 0
 				while x < 3:
-					tempPassword = input("Master Password: ")
+					tempPassword =  getpass.getpass("Master Password: ")
 					if tempPassword == masterPassword:
 						print("Enter a new password: ", end='')
 						editData(temp.row, temp.col+2)
@@ -274,7 +275,7 @@ def changeEntry():
 				while x < 3:
 					print("Current Username: ", end='')
 					print(sheet.cell(temp.row, temp.col+1).value)
-					tempPassword = input("Master Password: ")
+					tempPassword =  getpass.getpass("Master Password: ")
 					if tempPassword == masterPassword:
 						print("Enter a new username: ", end='')
 						editData(temp.row, temp.col+1)
