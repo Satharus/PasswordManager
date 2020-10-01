@@ -23,6 +23,11 @@ masterPasswordHint = sheet.cell(1,5).value
 print("The master password is: ", end='')
 print(masterPassword)
 #Fuction definitions
+
+#Clears the screen in all OSs
+def clearScreen():
+	os.system('cls' if os.name == 'nt' else 'clear')
+
 def initialiseServices():
 	#Adds all the services to the gServices array
 	global gServices
@@ -88,10 +93,10 @@ def insertNewEntry():
 					print("0-Exit")
 					choice = int(input(">"))
 					if choice == 1: #Listing all services
-						os.system("clear")
+						clearScreen()
 						listServices()
 					elif choice == 2: #Entering another service, continues the while loop
-						os.system("clear")
+						clearScreen()
 						continue
 					elif choice == 3: #Overwriting the service's values
 						temp = sheet.find(service)
@@ -123,7 +128,7 @@ def insertNewEntry():
 					else:
 						print("Invalid input!")
 						os.system("sleep 1")
-						os.system("clear")
+						clearScreen()
 						break
 			else:
 				print("Wrong password!")
@@ -161,17 +166,17 @@ def deleteEntry():
 			print("0-Exit")
 			choice = int(input(">"))
 			if choice == 1:
-				os.system("clear")
+				clearScreen()
 				listServices()
 			elif choice == 2:
-				os.system("clear")
+				clearScreen()
 				continue
 			elif choice == 0:
 				break
 			else:
 				print("Invalid input!")
 				os.system("sleep 1")
-				os.system("clear")
+				clearScreen()
 				break
 		break
 
@@ -207,17 +212,17 @@ def getInfo():
 			print("0-Exit")
 			choice = int(input(">"))
 			if choice == 1:
-				os.system("clear")
+				clearScreen()
 				listServices()
 			elif choice == 2:
-				os.system("clear")
+				clearScreen()
 				continue
 			elif choice == 0:
 				break;
 			else:
 				print("Invalid input!")
 				os.system("sleep 1")
-				os.system("clear")
+				clearScreen()
 				break
 		break
 
@@ -290,17 +295,17 @@ def changeEntry():
 			print("0-Exit")
 			choice = int(input(">"))
 			if choice == 1:
-				os.system("clear")
+				clearScreen()
 				listServices()
 			elif choice == 2:
-				os.system("clear")
+				clearScreen()
 				continue
 			elif choice == 0:
 				break
 			else:
 				print("Invalid input!")
 				os.system("sleep 1")
-				os.system("clear")
+				clearScreen()
 				break
 
 def main():
@@ -315,19 +320,19 @@ def main():
 	if choice == 0:
 		exit()
 	elif choice == 1:
-		os.system("clear")
+		clearScreen()
 		print("\t\t\t  Viewing an account's entry")
 		getInfo()
 	elif choice == 2:
-		os.system("clear")
+		clearScreen()
 		print("\t\t\t  Entering an account/service")
 		insertNewEntry()
 	elif choice == 3:
-		os.system("clear")
+		clearScreen()
 		print("\t\t\t  Modifying an account's data")
 		changeEntry()
 	elif choice == 4:
-		os.system("clear")
+		clearScreen()
 		print("\t\t\t  Deleting an account's entry")
 		deleteEntry()
 ######
@@ -340,7 +345,7 @@ while 1:
 	if target == 'y':
 		print("Going back to main menu")
 		initialiseServices()
-		os.system("clear")
+		clearScreen()
 	else:
 		exit()
 ######
